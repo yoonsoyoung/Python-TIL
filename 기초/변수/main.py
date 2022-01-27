@@ -33,10 +33,18 @@ print(a, id(a)) # 새로운 값을 할당했기 때문에 주소값이 바뀜
 print(b, id(b)) # 여전히 붕어빵을 가리키고 있기 때문에 그대로
 
 
-# is 연산자 = 주소값 비교(값 비교가 아님!)
+# [is] 연산자 = 주소값 비교(값 비교가 아님!)
 a = [ 1, 2, 3, 4, 5]
 b = a
 c = [1, 2, 3, 4, 5]
-print('a is b = ', a is b)
-print('a is c = ', a is c)
-print('b is c = ', b is c)
+print('a is b = ', a is b) # True
+print('a is c = ', a is c) # False
+print('b is c = ', b is c) # False
+
+# [==] 연산자 = 데이터 값 비교
+a = [ 1, 2, 3, 4, 5]
+b = a
+c = [1, 2, 3, 4, 5]
+print('a == b = ', a == b) # True
+print('a == c = ', a == c) # True
+print('b == c = ', b == c) # True
