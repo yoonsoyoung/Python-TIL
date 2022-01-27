@@ -64,3 +64,18 @@ e = [1,2,3,4,5]
 f = [1,2,3,4,5]
 print('e is f = ', e is f) # F 리스트는 각 객체가 만들어져 가리키게 됨
 print('e == f = ', e == f) # T
+
+
+# is 연산자  추가
+print('-' * 10)
+a = 'korea'
+b = 'korea'
+print('a is b = ', a is b)
+
+b += '!' # b 끝에 ! 추가
+print('b += ! = ', b, id(b)) # korea! 라는 새로운 메모리 공간
+print('a is b = ', a is b) # False -> a = korea , b = korea! 이므로 서로 다른 메모리 공간
+
+c = b[:-1] # b에서 끝에서 1자를 slice 잘라내기 => korea / !
+print('c = b[:-1] ', c, id(c)) # korea
+print('a is c = ', a is b) # False -> 다른 주소값인 b에서 잘라왔으므로 기존에 korea가 있음에도 새로 할당
