@@ -89,3 +89,20 @@ print(t, id(t), '-', t[:1], id(t[:1]), '-', t[:2], id(t[:2]), '-', t[:3], id(t[:
 # k[:4] = kore, k[:-1] = kore 지만 서로 다른 주소값
 print(t, id(t[:])) # 전부를 슬라이스. 변화 없이 슬라이스 했으므로 별도 메모리 공간 할당하지 않음
 print('t[:] is t[:5] ', t[:] is t[:5]) # True
+
+
+# 두 변수 값 교환
+print('-' * 10)
+a = 100
+b = 200
+print('교환 전 a, b = ', a, b)
+
+temp = a
+a = b
+b = temp
+print('교환 후 a, b = ', a, b) # swqp 방식
+
+c, d = 300, 400
+print('교환 전 c, d = ', c, d)
+c, d = d, c
+print('교환 후 c, d = ', c, d) # 문법적인 특징을 사용한 교환
