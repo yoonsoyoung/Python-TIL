@@ -79,3 +79,13 @@ print('a is b = ', a is b) # False -> a = korea , b = korea! 이므로 서로 �
 c = b[:-1] # b에서 끝에서 1자를 slice 잘라내기 => korea / !
 print('c = b[:-1] ', c, id(c)) # korea
 print('a is c = ', a is b) # False -> 다른 주소값인 b에서 잘라왔으므로 기존에 korea가 있음에도 새로 할당
+
+
+# 문자열의 slice 결과와 id(), is() 연산자
+print('-' * 10)
+t = 'korea'
+print(t, id(t), '-', t[:1], id(t[:1]), '-', t[:2], id(t[:2]), '-', t[:3], id(t[:3]),
+      '-', t[:4], id(t[:4]), t[:5], id(t[:5]),  '-', t[:-1], id(t[:-1])) # t = t[:5]
+# k[:4] = kore, k[:-1] = kore 지만 서로 다른 주소값
+print(t, id(t[:])) # 전부를 슬라이스. 변화 없이 슬라이스 했으므로 별도 메모리 공간 할당하지 않음
+print('t[:] is t[:5] ', t[:] is t[:5]) # True
