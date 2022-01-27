@@ -62,5 +62,5 @@ print('c == d = ', c == d) # T
 
 e = [1,2,3,4,5]
 f = [1,2,3,4,5]
-print('e is f = ', e is f) # F
+print('e is f = ', e is f) # F 리스트는 각 객체가 만들어져 가리키게 됨
 print('e == f = ', e == f) # T
