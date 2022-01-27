@@ -48,3 +48,19 @@ c = [1, 2, 3, 4, 5]
 print('a == b = ', a == b) # True
 print('a == c = ', a == c) # True
 print('b == c = ', b == c) # True
+
+# is, == 연산자 문제 연습
+a = 101
+b = 100 + 1
+print('a is b = ', a is b, ' > id(a) ', id(a), ' > id(b) ', id(b)) # T 101 이라는 공간이 이미 있기 때문에 같은 곳을 가리키게 됨
+print('a == b = ', a == b) # T
+
+c = 'korea'
+d = 'korea'
+print('c is d = ', c is d) # T
+print('c == d = ', c == d) # T
+
+e = [1,2,3,4,5]
+f = [1,2,3,4,5]
+print('e is f = ', e is f) # F
+print('e == f = ', e == f) # T
